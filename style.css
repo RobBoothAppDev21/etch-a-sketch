@@ -1,0 +1,82 @@
+/* RESET */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+/* Body */
+body {
+  display: flex;
+  justify-content: center;
+}
+
+/* Main container */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  width: 960px;
+}
+
+/* Button Container */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+/* Button */
+.clearGrid {
+  display: block;
+}
+
+/* Grid Container */
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  /* margin-top: 20px; */
+  padding: 10px;
+  /* flex-wrap: wrap; */
+  width: 960px;
+  justify-content: center;
+}
+
+/* Grid / Squares */
+.square {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  /* border-left: 1px solid black; */
+  /* border-bottom: 1px solid black; */
+  /* margin: 0px; */
+  /* width: 15%; */
+  /* border:  0.1px solid black; */
+  flex: 4 4 6;
+}
+.square:hover {
+  background-color: red;
+}
