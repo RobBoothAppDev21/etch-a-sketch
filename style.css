@@ -27,7 +27,9 @@ body {
 	margin:0;
 	padding:0;
 	height:100%;
+  /* background-color: #d3d3de; */
 }
+
 /* Body */
 body {
   display: flex;
@@ -37,46 +39,119 @@ body {
 /* Main container */
 .mainContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   /* align-items: flex-start; */
   width: 960px;
+  height: 600px;
+  gap: 40px;
+  margin-top: 50px;
 }
 
 /* Button Container */
 .buttonContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding-top: 10px;
+  align-items: center;
+  gap: 40px;
 }
 /* Button */
-.clearGrid {
-  display: block;
+
+button {
+  width: 100%;
+  height: 45px;
 }
+
+input[type='color']:active {
+  transition: transform 0.05s ease-in-out;
+  transform: scale(1);
+}
+
+input[type='color'] {
+  -webkit-appearance: none;
+  width: 80px;
+  height: 80px;
+  border: none;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch {
+  border: none;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 3px 8px;
+}
+
+/* Slider Div - Contains slide and text */
+.sliderDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Slider */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3de;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  /* border: 0.5px solid #04AA6D; */
+}
+
+.slide:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.sliderText {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+/* .clearGrid {
+  display: block;
+} */
 
 /* Grid Container */
 .gridContainer {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  /* margin-top: 20px; */
-  padding: 10px;
-  /* flex-wrap: wrap; */
-  width: 960px;
+  border: 0.5px solid gray;
+  background-color: white;
+  /* padding: 10px; */
+  width: 480px;
+  height: 480px;
   justify-content: center;
 }
 
 /* Grid / Squares */
 .square {
   display: flex;
-  padding: 5px;
+  /* padding: 5px; */
   justify-content: center;
   align-items: center;
-  /* border-left: 1px solid black; */
-  /* border-bottom: 1px solid black; */
-  /* margin: 0px; */
-  /* width: 15%; */
-  /* border:  0.1px solid black; */
-  flex: 4 4 6;
 }
-.square:hover {
-  background-color: red;
+.square:hover, .squareActive {
+  background-color: black;
 }
